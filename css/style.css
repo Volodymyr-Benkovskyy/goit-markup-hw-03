@@ -48,19 +48,23 @@ img {
   width: 1158px;
   margin-right: auto;
   margin-left: auto;
+  padding: 0 15px;
 }
 
 .section {
-  padding: 72px 15px 120px 15px;
+  padding: 120px 0;
 }
 
 /* =================== header ======================= */
 .header {
-  display: flex;
-  justify-content: space-between;
-  padding: 24px 15px 24px 15px;
+  padding: 24px 0;
   background: var(--accented-color);
   border-bottom: 1px solid var(--lucid-color);
+}
+
+.header-block {
+  display: flex;
+  justify-content: space-between;
 }
 
 .navigation {
@@ -78,7 +82,7 @@ img {
 
 /*  ========================= logo ================ */
 .logo-web {
-  font-family: "Raleway";
+  font-family: "Raleway" sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -141,24 +145,25 @@ img {
 /* ======================= hero  image =========================== */
 
 .hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 188px 15px;
+  padding: 188px 0;
   background-color: var(--primary-color);
 }
 
 .hero-title {
+  margin-left: auto;
+  margin-right: auto;
+  width: 494px;
   text-align: center;
   font-weight: 700;
   font-size: 56px;
   line-height: 1;
   margin-bottom: 48px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   color: var(--accented-color);
 }
 
 .hero-btn {
+  display: block;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -171,6 +176,8 @@ img {
   padding: 16px 32px;
   border: none;
   cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-btn:hover,
@@ -181,21 +188,28 @@ img {
 
 /* ====================== professional qualities ======================  */
 
-.professional-qualities {
-  display: flex;
-  flex-direction: column;
-}
-
-.qualities-list :not(:last-child) {
-  margin-right:22px;
+.professional-qualities > .hide {
+  visibility: hidden;
+  margin-bottom: 0;
 }
 
 .qualities-list {
   display: flex;
-  text-align: justify;
+  margin-right: -24px;
+}
+
+.qualities-item {
+  margin-right: 24px;
+}
+
+.description {
+  text-align: start;
 }
 
 /* ============ What are we doing ============ */
+.doing {
+  padding-top: 0;
+}
 
 .doing-list {
   display: flex;
@@ -213,7 +227,6 @@ img {
 }
 
 .subtitle {
-  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -224,7 +237,7 @@ img {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   color: var(--filler-color);
 }
 
@@ -235,7 +248,7 @@ img {
 
 .team-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .team-card {
@@ -254,25 +267,19 @@ img {
 
 .footer {
   background-color: var(--primary-color);
-  padding: 100px 15px 100px 15px;
+  padding: 100px 0;
 }
 
 .logo-footer {
-  margin-left: 15px;
-  font-family: "Raleway";
+  font-family: "Raleway" sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.33;
-  margin-bottom: 18px;
   color: var(--selected-color);
 }
 
 .logo-footer-color {
   color: var(--secondary-color);
-}
-
-.color-logo-studio {
-  color: var(--selected-color);
 }
 
 .logo-footer-color:hover,
@@ -288,8 +295,8 @@ img {
 }
 
 .description-footer {
+  margin-top: 16px;
   width: 264px;
-  margin: 18px 0 0 15px;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -299,14 +306,17 @@ img {
 }
 
 /* ======================================== portfolio style ============================ */
+.section-portfolio {
+  padding: 50px 0 120px;
+}
 
 .portfolio-title {
+  visibility: hidden;
   font-weight: 700;
   font-size: 46px;
   line-height: 1;
   text-align: center;
   letter-spacing: 0.02em;
-  margin-bottom: 72px;
 }
 
 .button-list {
@@ -329,9 +339,9 @@ img {
   cursor: pointer;
 }
 
-.button-list :not(:last-child) {
+/* .button-list :not(:last-child) {
   margin-right: 24px;
-}
+} */
 
 .portfolio-item-btn:hover,
 .portfolio-item-btn:focus {
@@ -343,12 +353,19 @@ img {
 .portfolio {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-between;*/
+  margin-left: -24px;
+  margin-bottom: -48px;
 }
 
 .portfolio-item {
   background: var(--accented-color);
-  border: 1px solid var(--lucid-color);
+  /* margin-bottom: 48px;*/
+}
+
+.portfolio > .portfolio-item {
+  flex-basis: calc(100% / 3 - 24px);
+  margin-left: 24px;
   margin-bottom: 48px;
 }
 
@@ -357,10 +374,13 @@ img {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color:var(--primary-color);
+  color: var(--primary-color);
   margin-bottom: 8px;
 }
 
 .card-text {
   padding: 32px 16px;
+  border-left: 1px solid var(--lucid-color);
+  border-right: 1px solid var(--lucid-color);
+  border-bottom: 1px solid var(--lucid-color);
 }

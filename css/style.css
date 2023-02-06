@@ -323,15 +323,6 @@ img {
   padding: 96px 0 120px;
 }
 
-.portfolio-title {
-  
-  font-weight: 700;
-  font-size: 46px;
-  line-height: 1;
-  text-align: center;
-  letter-spacing: 0.02em;
-}
-
 .button-list {
   display: flex;
   justify-content: center;

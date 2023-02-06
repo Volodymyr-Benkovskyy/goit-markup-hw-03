@@ -9,6 +9,7 @@
 }
 
 body {
+  background-color: var(--accented-color);
   color: var(--primary-color);
   font-family: "Roboto", sans-serif;
 }
@@ -82,7 +83,7 @@ img {
 
 /*  ========================= logo ================ */
 .logo-web {
-  font-family: "Raleway" sans-serif;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -188,22 +189,32 @@ img {
 
 /* ====================== professional qualities ======================  */
 
-.professional-qualities > .hide {
-  visibility: hidden;
-  margin-bottom: 0;
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .qualities-list {
   display: flex;
-  margin-right: -24px;
+  gap: 24px;
 }
 
-.qualities-item {
-  margin-right: 24px;
-}
+
 
 .description {
-  text-align: start;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  color: var(--filler-color);
 }
 
 /* ============ What are we doing ============ */
@@ -227,13 +238,15 @@ img {
 }
 
 .subtitle {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
 }
 
-.description {
+.description-team {
+  text-align: center;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -271,7 +284,7 @@ img {
 }
 
 .logo-footer {
-  font-family: "Raleway" sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.33;
@@ -307,11 +320,11 @@ img {
 
 /* ======================================== portfolio style ============================ */
 .section-portfolio {
-  padding: 50px 0 120px;
+  padding: 96px 0 120px;
 }
 
 .portfolio-title {
-  visibility: hidden;
+  
   font-weight: 700;
   font-size: 46px;
   line-height: 1;
@@ -339,9 +352,9 @@ img {
   cursor: pointer;
 }
 
-/* .button-list :not(:last-child) {
+ .button-list :not(:last-child) {
   margin-right: 24px;
-} */
+} 
 
 .portfolio-item-btn:hover,
 .portfolio-item-btn:focus {
@@ -353,21 +366,18 @@ img {
 .portfolio {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-between;*/
-  margin-left: -24px;
-  margin-bottom: -48px;
+  
+ column-gap: 24px;
+ row-gap: 48px;
+  
 }
 
 .portfolio-item {
-  background: var(--accented-color);
-  /* margin-bottom: 48px;*/
+  background-color: var(--accented-color);
+  
 }
 
-.portfolio > .portfolio-item {
-  flex-basis: calc(100% / 3 - 24px);
-  margin-left: 24px;
-  margin-bottom: 48px;
-}
+
 
 .subtitle-card {
   font-weight: 500;
